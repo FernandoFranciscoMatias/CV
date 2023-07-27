@@ -458,6 +458,7 @@ span{
 /*habilidades*/
 
 .skills{
+    position: relative;
     min-height: auto;
     padding-bottom: 7rem;
     background: var(--second-bg-color);
@@ -484,6 +485,11 @@ span{
     display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem;
+}
+
+.skills-column h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.7rem;
 }
 
 .skills-column .skills-box {
@@ -600,6 +606,7 @@ span{
 }
 
 .contact{
+    position: relative;
     min-height: auto;
     padding-bottom: 7rem;
 }
@@ -607,7 +614,7 @@ span{
 .contact h2 {
     display: inline-block;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
 }
 
 .contact form{
@@ -685,10 +692,10 @@ span{
     background: var(--second-bg-color);
 }
 
-.footer-text,
+/*.footer-text,
 .footer-iconTop {
     position: relative;
-}  
+}  */
 
 .footer-text p{
     font-size: 1.6rem;
@@ -738,7 +745,7 @@ span{
     position: absolute;
     top: 0;
     right: 0;
-    width: 100;
+    width: -100;
     height: 100%;
     background: var(--bg-color);
     z-index: 98;
@@ -754,25 +761,35 @@ span{
  #menu-icon .animate,
  .home.show-animate .animate {
     animation: showRight 1s ease forwards;
-    animation-delay: calc(.3s * var(--i))
+    animation-delay: calc(.3s * var(--i));
+    width: 100%;
  }
 
  .animate.scroll { 
     transition: 1s ease;
-    transition-delay: calc(.3s / var(--i));
+    transition-delay: calc(.3s * var(--i));
     animation: none;
  }
 
- .education .education-box .animate.scroll {
-    width: 105%;
+ section:nth-child(odd) .animate.scroll,
+ .footer .animate.scroll {
+    background: var(--second-bg-color);
  }
 
+ .education .education-box .animate.scroll,
+ .about .animate.scroll,
+ .skills .animate.scroll,
+ .contact .animate.scroll/*,
+ .footer .animate.scroll*/ {
+    width: 105%;
+ }
+ 
  .about.show-animate .animate.scroll,
  .education.show-animate .animate.scroll,
  .skills.show-animate .animate.scroll,
- .contact.show-animate .animate.scroll,
- .footer.show-animate .animate.scroll {
-    transition-delay: calc(.3s * var(--i));
+ .contact.show-animate .animate.scroll/*,
+ .footer.show-animate .animate.scroll*/{
+    transition-delay: calc(.3s / var(--i));
     width: 0;
 
  }
@@ -799,6 +816,12 @@ span{
 
     .footer {
         padding: 2rem 4%;
+    }
+}
+
+@media (max-width: 891px){
+    .animate.home-img {
+        width: 55%;
     }
 }
 
@@ -908,6 +931,7 @@ span{
 
     .footer p {
         margin-top: 2rem;
+        text-align: center;
     }
 }
 
@@ -926,6 +950,7 @@ span{
     .home-content h1 {
         font-size: 5rem;
     }
+
 }
 
 /*KEYFRAMES ANIMATION*/
