@@ -9,6 +9,7 @@
     <!-- Links de iconos de boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+
 </head>
 
 <body>
@@ -50,8 +51,8 @@
             </p>
 
             <div class="btn-box">
-                <a href="#" class="btn">Hire Me</a>
-                <a href="#" class="btn">Let's Talk</a>
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="https://api.whatsapp.com/send?phone=+5491122532506" class="btn" target="_blank">Let's Talk</a>
                 <span class="animate" style="--i:5;"></span>
             </div>
         </div>
@@ -384,15 +385,15 @@
 <section class="contact" id="contact">
     <h2 class="heading">Contact<span>me</span><span class="animate scroll" style="--i:1;"></span></h2>
 
-    <form action="#">
+    <form action="https://formspree.io/f/moqzzrar" method="post">
         <div class="input-box">
             <div class="input-field">
-                <input type="text" placeholder="Full Name" required>
+                <input type="text" name="name"  placeholder="Full Name" id="Name" required>
                 <span class="focus"></span>
             </div>
 
             <div class="input-field">
-                <input type="text" placeholder="Email" required>
+                <input type="email" name="email" placeholder="Email" id="Email" required>
                 <span class="focus"></span>
             </div>
 
@@ -401,12 +402,12 @@
 
         <div class="input-box">
             <div class="input-field">
-                <input type="number" placeholder="Phone" required>
+                <input type="number" name="phone" placeholder="Phone" id="Phone" required>
                 <span class="focus"></span>
             </div>
 
             <div class="input-field">
-                <input type="text" placeholder="Subject" required>
+                <input type="text" name="subject" placeholder="Subject" id="Subject" required>
                 <span class="focus"></span>
             </div>
 
@@ -414,7 +415,7 @@
         </div>
 
         <div class="textarea-field">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+            <textarea name="message" id="Message" cols="30" rows="10" placeholder="Message" required></textarea>
             <span class="focus"></span>
 
             <span class="animate scroll" style="--i:7;"></span>
